@@ -10,7 +10,7 @@ read -p "Relative path to test repo [../docs-internal-test] (enter for default):
 TEST_PATH=${TEST_PATH:-../docs-internal-test}
 
 cd $TEST_PATH
-REPO_NAME=$(basename `git rev-parse --show-toplevel`)
+REPO_NAME=$(basename "`git rev-parse --show-toplevel`")
 REPO_BRANCH=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
 cd -
 
