@@ -95,7 +95,7 @@ filter_renames() {
   local result=""
 
   IFS=$'\n'
-  for i in $(seq 1 $(echo "$new_files" | wc -l)); do
+  for i in $(seq 1 "$(echo "$new_files" | wc -l)"); do
     NEW=$(echo "$new_files" | sed -n "${i}p")
     OLD=$(echo "$old_files" | sed -n "${i}p")
 
